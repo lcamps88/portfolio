@@ -18,9 +18,9 @@ const Sidenav = () => {
     <div>
       <AiOutlineMenu
         onClick={handleNav}
-        className='absolute top-4 right-4z-[99] md:hidden'
+        className='absolute top-4 right-4 z-[99] md:hidden'
       />
-      {!nav ? (
+      {nav ? (
         <div className='fixed w-full h-screen bg-white/90 flex flex-col justify-center items-center z-20'>
           <a
             href='#main'
@@ -59,8 +59,50 @@ const Sidenav = () => {
           </a>
         </div>
       ) : (
-        <div></div>
+       ''
       )}
+      <div className='md:block hidden fixed top-[25%] z-10'>
+        <div className='flex flex-col pl-10'>
+          <a
+            href='#main'
+            className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'
+          >
+            <AiOutlineHome size={20} />
+          </a>
+        </div>
+        <div className='flex flex-col pl-10'>
+          <a
+            href='#work'
+            className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'
+          >
+            <GrProjects size={20} />
+          </a>
+        </div>
+        <div className='flex flex-col pl-10'>
+          <a
+            href='#projects'
+            className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'
+          >
+            <AiOutlineProject size={20} />
+          </a>
+        </div>
+        <div className='flex flex-col pl-10'>
+          <a
+            href='#profile'
+            className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'
+          >
+            <BsPerson size={20} />
+          </a>
+        </div>
+        <div className='flex flex-col pl-10'>
+          <a
+            href='#contact'
+            className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'
+          >
+            <AiOutlineMail size={20} />
+          </a>
+        </div>
+      </div>
     </div>
   )
 }
